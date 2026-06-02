@@ -52,7 +52,7 @@
       "target": "api::tag.tag"
     },
     "contentHtml": {
-      "type": "text",
+      "type": "richtext",
       "required": true
     },
     "seo": {

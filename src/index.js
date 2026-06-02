@@ -32,6 +32,8 @@ module.exports = {
       'api::category.category.findOne',
       'api::tag.tag.find',
       'api::tag.tag.findOne',
+      'api::social-media.social-media.find',
+      'api::social-media.social-media.findOne',
     ];
 
     for (const action of actionsToEnable) {
