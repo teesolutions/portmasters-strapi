@@ -1,5 +1,9 @@
+const normalizeMinioEndpoint = require("./utils/normalize-minio-endpoint");
+
 module.exports = ({ env }) => {
-  const minioEndpoint = env("MINIO_ENDPOINT");
+  const minioPublicEndpoint = normalizeMinioEndpoint(
+    env("MINIO_PUBLIC_ENDPOINT", env("MINIO_ENDPOINT"))
+  );
 
   return [
     "strapi::logger",
@@ -16,14 +20,14 @@ module.exports = ({ env }) => {
               "data:",
               "blob:",
               "market-assets.strapi.io",
-              ...(minioEndpoint ? [minioEndpoint] : []),
+              ...(minioPublicEndpoint ? [minioPublicEndpoint] : []),
             ],
             "media-src": [
               "'self'",
               "data:",
               "blob:",
               "market-assets.strapi.io",
-              ...(minioEndpoint ? [minioEndpoint] : []),
+              ...(minioPublicEndpoint ? [minioPublicEndpoint] : []),
             ],
             upgradeInsecureRequests: null,
           },
