@@ -3,7 +3,7 @@ const normalizeMinioEndpoint = require("./utils/normalize-minio-endpoint");
 module.exports = ({ env }) => {
   const minioEndpoint = normalizeMinioEndpoint(env("MINIO_ENDPOINT"));
   const minioPublicEndpoint = normalizeMinioEndpoint(
-    env("MINIO_PUBLIC_ENDPOINT", minioEndpoint)
+    env("MINIO_PUBLIC_ENDPOINT", minioEndpoint),
   );
 
   return {

@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_landing_feature_blocks",
+  "info": {
+    "displayName": "feature-block"
+  },
+  "attributes": {
+    "blockKey": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "sortOrder": {
+      "type": "integer"
+    }
+  }
+}

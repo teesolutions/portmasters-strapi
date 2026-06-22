@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_landing_text_items",
+  "info": {
+    "displayName": "text-item"
+  },
+  "attributes": {
+    "text": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

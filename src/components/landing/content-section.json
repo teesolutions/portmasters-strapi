@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_landing_content_sections",
+  "info": {
+    "displayName": "content-section"
+  },
+  "attributes": {
+    "sectionKey": {
+      "type": "string",
+      "required": true
+    },
+    "heading": {
+      "type": "string",
+      "required": true
+    },
+    "contentType": {
+      "type": "enumeration",
+      "enum": ["paragraph", "bullet_list"]
+    },
+    "paragraph": {
+      "type": "richtext"
+    },
+    "bulletItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "landing.text-item"
+    },
+    "sortOrder": {
+      "type": "integer"
+    }
+  }
+}
